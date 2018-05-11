@@ -1,0 +1,60 @@
+  <div class="heading-container">
+      <h1 class="h1 heading white-text">Employees</h1>
+  </div>
+  
+
+
+<div class="container" *ngIf="employeeList; else showNull">
+  
+    <table class="table white-text">
+        <thead>
+          <tr>
+            <td>
+              First Name
+            </td>
+            <td>
+              Last Name
+            </td>
+            <td>
+              Designation
+            </td>
+            <td>
+              Contact
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let emp of employeeList" >
+            <td>{{emp.emp_firstName}}</td>
+            <td>{{emp.emp_lastName}}</td>
+            <td>{{emp.emp_Desig}}</td>
+            <td>{{emp.emp_Contact}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteUser(emp.emp_ID)">Delete</button>
+              <button class="btn btn-primary" (click)="updateUser(emp.emp_ID)">Update</button>
+            </td>
+            
+            </tr>
+            <tr>
+            </tr>
+        </tbody>
+      </table>
+</div>
+<ng-template #showNull>
+  <div class="container">
+    <div class="no-data-message white-text">
+        <p>Sorry! There is no data</p>
+    </div>
+     
+  </div>
+</ng-template>
+
+<p-paginator pageLinkSize="3" class="no-background" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
+
+
+<div class="button-box-navigate middle-button width-50" routerLink="">
+    <p>Home</p>
+</div>
+
+
+
