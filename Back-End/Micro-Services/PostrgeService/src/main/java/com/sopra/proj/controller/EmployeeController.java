@@ -4,9 +4,11 @@
 package com.sopra.proj.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,7 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService employeeservice;
 	
+	@CrossOrigin(origins="http://127.0.0.1:4200")
 	@RequestMapping(value="/employees",method=RequestMethod.GET)
     public ResponseEntity<List<Employee>> getEmployees() {
         List<Employee> employees = employeeservice.getEmployees();
@@ -33,13 +36,13 @@ public class EmployeeController {
             return new ResponseEntity<List<Employee>>(HttpStatus.NO_CONTENT);
         return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
     }
- 
+	@CrossOrigin(origins="http://127.0.0.1:4200")
     @RequestMapping(value="/addemployee",method=RequestMethod.POST)
     public ResponseEntity<Void> addEmployee(@RequestBody Employee emp){
     	employeeservice.addEmployee(emp);
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
-    
+	@CrossOrigin(origins="http://127.0.0.1:4200")
     @RequestMapping(value="/deleteemployee/{id}",method=RequestMethod.DELETE)
     public ResponseEntity<Employee> deleteEmployee(@PathVariable("id") int id){
        
@@ -52,6 +55,7 @@ public class EmployeeController {
         return new ResponseEntity<Employee>(HttpStatus.OK);
     }
     
+	@CrossOrigin(origins="http://127.0.0.1:4200")
     @RequestMapping(value="/updateemployee/{id}",method=RequestMethod.PUT)
     public ResponseEntity<Employee> updateEmployee(@PathVariable("id") int id, @RequestBody Employee emp){
     	try{
