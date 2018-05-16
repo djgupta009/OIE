@@ -1,0 +1,38 @@
+.button-box{
+    display: block;
+    width: 90%;
+    height: 12rem;
+    background: #E91E43;
+    text-align: center;
+    line-height: 12rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.sub-section-header{
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+
+.mg-p{
+    height: 30rem;
+    color: white;
+    text-align: center;  
+}
+.h1{
+    font-size: 6rem;
+}
+.overlay{
+    padding-top: 10rem;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.portal-container{
+    height: 100vh;
+}

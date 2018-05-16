@@ -1,0 +1,44 @@
+<div class="heading-container">
+  <h1 class="h1 heading white-text">Skills Details</h1>
+</div>
+
+<div class="container skill-data" *ngIf="skillList | filterList:page:recordSizePerPage; else showNull">
+
+  <table class="table white-text">
+    <thead>
+      <tr>
+        <td>
+          Skill
+        </td>
+        <td>
+          Description
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let skill of skillList">
+        <td>{{skill.skill_name}}</td>
+        <td>{{skill.skill_description}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="updateSkill(skill.skill_id)">Update</button>
+          <button class="btn btn-danger" (click)="deleteSkill(skill.skill_id)">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #showNull>
+  <div class="container">
+    <div class="no-data-message white-text">
+      <p>Sorry! There is no data</p>
+    </div>
+
+  </div>
+</ng-template>
+
+<p-paginator pageLinkSize="3" [rows]="recordSizePerPage" [totalRecords]="skillListLength" (onPageChange)="paginate($event)" class="no-background"></p-paginator>
+
+
+<div class="button-box-navigate middle-button width-50" routerLink="">
+  <p>Home</p>
+</div>

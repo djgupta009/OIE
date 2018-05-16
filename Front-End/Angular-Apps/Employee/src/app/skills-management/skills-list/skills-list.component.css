@@ -1,0 +1,43 @@
+.heading{
+    text-align: center;
+}
+
+.white-text{
+    color: white;
+}
+.heading-container{
+    padding: 10rem 0rem;
+}
+.button-box-navigate{
+    display: block;
+    height: 6rem;
+    background: #E91E43;
+    text-align: center;
+    line-height: 6rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 2rem;
+}
+.no-data-message{
+    width: 80%;
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.middle-button{
+    margin: 0 auto;
+}
+
+.width-50{
+    width: 30%;
+}
+
+:host >>> .ui-widget-header{
+   border: 0px;
+   background: transparent;
+   margin-bottom: 8rem;
+}
+.skill-data{
+    height: 40vh;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="form-handler">
+    <form [formGroup]="skillUpdateForm" (ngSubmit)="updateSkill()">
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>Skill</label>
+            <input type="text" formControlName="skill_name" class="form-control remark" maxlength="20" />
+            <div *ngIf="this.skillUpdateForm.get('skill_name').errors && this.skillUpdateForm.get('skill_name').touched">
+              <p class="errors" class="label label-danger">{{checkSkillName()}}</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>Contact</label>
+            <input type="text" formControlName="skill_description" class="form-control" maxlength="30" />
+            <div *ngIf="this.skillUpdateForm.get('skill_description').errors && this.skillUpdateForm.get('skill_description').touched">
+              <p class="errors" class="label label-danger">{{checkDescription()}}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="row">
+
+          <div class="col-lg-6 submit-buttons">
+            <div class="form-group">
+              <input type="submit" class="button expanded" value="Update Skill" class="btn btn-success" [disabled]="!this.skillUpdateForm.valid">
+              <!-- <input type="button" class="button expanded" value="Submit offline Requests" (click)="addCachedData()" class="btn btn-primary" -->
+            </div>
+          </div>
+
+    </div>  
+
+    </form>
+  </div>
+</div>
