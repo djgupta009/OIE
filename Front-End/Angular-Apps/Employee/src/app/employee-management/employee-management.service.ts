@@ -15,11 +15,10 @@ export class EmployeeManagementService {
 
   userUrl: string = 'http://10.224.21.173:8080/';
   url: string = 'http://127.0.0.1:4200/';
-  employeeListObeserver = new Subject();
   employeeList: any;
 
   getEmployeeById(empId: number) {
-    console.log(empId);
+    
     for (let i = 0; i < this.employeeList.length; i++) {
       if (this.employeeList[i].emp_ID == empId) {
         return this.employeeList[i];

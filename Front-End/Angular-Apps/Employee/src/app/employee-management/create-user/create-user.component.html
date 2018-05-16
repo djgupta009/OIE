@@ -1,58 +1,62 @@
 <div class="container">
   <div class="form-handler">
-  <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
-    <div class="form-container">
-      <div>
-        <h1 class="h1 text-center">Employee Form</h1>
-        
-        
-<!--fsadadsd-->
-        
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" formControlName="emp_firstName" class="form-control" class="form-control" />
-              
-            
-          </div>
+    <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+      <div class="form-container">
+        <div>
+          <h1 class="h1 text-center">Employee Form</h1>
 
-          
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" formControlName="emp_lastName" class="form-control" />
-            </div>
-            
-          
 
-       
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label>Designation</label>
-              <input type="text" formControlName="emp_Desig" class="form-control remark"/>
-            </div>
-            
-          </div>
-
-          <div class="col-lg-6">
-            <div class="form-group">
-              <label>Contact</label>
-              <input type="text" formControlName="emp_Contact" class="form-control" />
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" formControlName="emp_firstName" class="form-control" class="form-control" />
+            <div *ngIf="this.employeeForm.get('emp_firstName').errors && this.employeeForm.get('emp_firstName').touched">
+                <p class="errors" class="label label-danger">{{checkFirstName()}}</p>
             </div>
           </div>
-          
-        </div>
 
-        <div class="row">
-          <div class="col-lg-6 submit-buttons">
-            <div class="form-group">
-              <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success">
-              <!-- <input type="button" class="button expanded" value="Submit offline Requests" (click)="addCachedData()" class="btn btn-primary" -->
+
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" formControlName="emp_lastName" class="form-control" />
+            <div *ngIf="this.employeeForm.get('emp_lastName').errors && this.employeeForm.get('emp_lastName').touched">
+                <p class="errors" class="label label-danger">{{checkLastName()}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Designation</label>
+                <input type="text" formControlName="emp_Desig" class="form-control remark" />
+                <div *ngIf="this.employeeForm.get('emp_Desig').errors && this.employeeForm.get('emp_Desig').touched">
+                    <p class="errors" class="label label-danger">{{checkDesig()}}</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Contact</label>
+                <input type="text" formControlName="emp_Contact" class="form-control" maxlength="10"/>
+                <div *ngIf="this.employeeForm.get('emp_Contact').errors && this.employeeForm.get('emp_Contact').touched">
+                    <p class="errors" class="label label-danger">{{checkContact()}}</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 submit-buttons">
+              <div class="form-group">
+                <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success" [disabled]="!this.employeeForm.valid">
+                <!-- <input type="button" class="button expanded" value="Submit offline Requests" (click)="addCachedData()" class="btn btn-primary" -->
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
-</div>
+    </form>
+  </div>
 </div>

@@ -14,30 +14,35 @@ export class EmployeeListComponent implements OnInit {
   constructor(private empService: EmployeeManagementService,
   private router: Router) { }
   employeeList: any;
-
+  employeeListLength: number;
+  recordSizePerPage: number = 5;
+  page: number = 1;
   ngOnInit() {
-  //  this.empService.employeeListObeserver.subscribe( res =>
-  //   this.employeeList = res
-  //  );
       this.getEmployees();
   }
 
   getEmployees(){
       this.empService.getEmployees().subscribe(
         response => {
-          this.employeeList = response;
+          if(response){
+            this.employeeList = response;
+            this.employeeListLength = Object.keys(this.employeeList).length;
+          }
         }
       );
   }
 
   deleteUser(empId: number){
-    console.log(empId);
     this.empService.deleteEmployee(empId).subscribe(()=>{
       this.getEmployees();
     });
   }
 
   updateUser(empId: number){
-      this.router.navigate(['updateuser/',empId]);
+      this.router.navigate(['/employeemanagement/updateemployee/',empId]);
+  }
+
+  paginate(event: any){
+    this.page = +(event.page + 1);
   }
 }

@@ -2,9 +2,7 @@
       <h1 class="h1 heading white-text">Employees</h1>
   </div>
   
-
-
-<div class="container" *ngIf="employeeList; else showNull">
+<div class="container" *ngIf="employeeList | filterList:page:recordSizePerPage; else showNull">
   
     <table class="table white-text">
         <thead>
@@ -30,13 +28,11 @@
             <td>{{emp.emp_Desig}}</td>
             <td>{{emp.emp_Contact}}</td>
             <td>
-              <button class="btn btn-danger" (click)="deleteUser(emp.emp_ID)">Delete</button>
               <button class="btn btn-primary" (click)="updateUser(emp.emp_ID)">Update</button>
+              <button class="btn btn-danger" (click)="deleteUser(emp.emp_ID)">Delete</button>
             </td>
             
-            </tr>
-            <tr>
-            </tr>
+          </tr>
         </tbody>
       </table>
 </div>
@@ -49,7 +45,7 @@
   </div>
 </ng-template>
 
-<p-paginator pageLinkSize="3" class="no-background" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
+<p-paginator pageLinkSize="3" [rows]="recordSizePerPage" [totalRecords]="skillListLength" (onPageChange)="paginate($event)" class="no-background"></p-paginator>
 
 
 <div class="button-box-navigate middle-button width-50" routerLink="">

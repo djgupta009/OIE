@@ -21,14 +21,19 @@
             <div class="form-group">
               <label>Designation</label>
               <input type="text" formControlName="emp_Desig" class="form-control remark" />
+              <div *ngIf="this.employeeUpdateForm.get('emp_Desig').errors && this.employeeUpdateForm.get('emp_Desig').touched">
+                  <p class="errors" class="label label-danger">{{checkDesig()}}</p>
+              </div>
             </div>
-
           </div>
 
           <div class="col-lg-6">
             <div class="form-group">
               <label>Contact</label>
-              <input type="text" formControlName="emp_Contact" class="form-control" />
+              <input type="text" formControlName="emp_Contact" class="form-control" maxlength="10"/>
+              <div *ngIf="this.employeeUpdateForm.get('emp_Contact').errors && this.employeeUpdateForm.get('emp_Contact').touched">
+                  <p class="errors" class="label label-danger">{{checkContact()}}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -36,7 +41,7 @@
         <div class="row">
           <div class="col-lg-6 submit-buttons">
             <div class="form-group">
-              <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success">
+              <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success" [disabled]="!this.employeeUpdateForm.valid">
               <!-- <input type="button" class="button expanded" value="Submit offline Requests" (click)="addCachedData()" class="btn btn-primary" -->
             </div>
           </div>
