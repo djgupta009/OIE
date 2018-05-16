@@ -44,7 +44,7 @@ public class EmployeeController {
     }
 	@CrossOrigin(origins="http://127.0.0.1:4200")
     @RequestMapping(value="/deleteemployee/{id}",method=RequestMethod.DELETE)
-    public ResponseEntity<Employee> deleteEmployee(@PathVariable("id") int id){
+    public ResponseEntity<Employee> deleteEmployee(@Valid @PathVariable("id") int id){
        
     	try{
     		employeeservice.deleteEmployee(id); 
