@@ -64,7 +64,7 @@ public class EmployeeService implements IEmployeeService {
 	    employeerepository.findById(id).map(empToUpdate -> {
 		empToUpdate.setEmp_Desig(emp.getEmp_Desig());
 		empToUpdate.setEmp_Contact(emp.getEmp_Contact());
-		if(!emp.getEmp_Skills().isEmpty())
+	     if(null != emp.getEmp_Skills() && !emp.getEmp_Skills().isEmpty())
 		{
 			emp.getEmp_Skills().forEach(skill -> {skillrepository.findById(skill.getSkill_id()).map
 				(s -> {
