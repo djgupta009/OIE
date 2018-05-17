@@ -1,6 +1,7 @@
 package com.sopra.proj;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.ApplicationPidFileWriter;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -8,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 public class PostrgeServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PostrgeServiceApplication.class, args);
+		SpringApplication springApplication = new SpringApplication(PostrgeServiceApplication.class);
+		springApplication.addListeners(new ApplicationPidFileWriter());     // register PID write to spring boot. It will write PID to file
+		springApplication.run(args);
 	}
 }
