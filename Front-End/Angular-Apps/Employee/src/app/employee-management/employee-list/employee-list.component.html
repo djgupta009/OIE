@@ -1,56 +1,64 @@
-  <div class="heading-container">
-      <h1 class="h1 heading white-text">Employees</h1>
-  </div>
-  
-<div class="container" *ngIf="employeeList | filterList:page:recordSizePerPage; else showNull">
-  
-    <table class="table white-text">
-        <thead>
-          <tr>
-            <td>
-              First Name
-            </td>
-            <td>
-              Last Name
-            </td>
-            <td>
-              Designation
-            </td>
-            <td>
-              Contact
-            </td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr  *ngFor="let emp of employeeList" >
-            <td>{{emp.emp_firstName}}</td>
-            <td>{{emp.emp_lastName}}</td>
-            <td>{{emp.emp_Desig}}</td>
-            <td>{{emp.emp_Contact}}</td>
-            <td>
-              <button class="btn btn-primary" (click)="updateUser(emp.emp_ID)">Update</button>
-              <button class="btn btn-danger" (click)="deleteUser(emp.emp_ID)">Delete</button>
-            </td>
-            
-          </tr>
-        </tbody>
-      </table>
+<div class="heading-container">
+  <h1 class="h1 heading white-text">Employees List</h1>
+</div>
+
+<p-confirmDialog></p-confirmDialog>
+
+<div class="container" *ngIf="employeeList; else showNull">
+
+  <table class="table white-text employee-data">
+    <thead>
+      <tr>
+        <td>
+          First Name
+        </td>
+        <td>
+          Last Name
+        </td>
+        <td>
+          Designation
+        </td>
+        <td>
+          Contact
+        </td>
+        <td>
+          Skills
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let emp of employeeList  | filterList:page:recordSizePerPage">
+        <td>{{emp.emp_firstName}}</td>
+        <td>{{emp.emp_lastName}}</td>
+        <td>{{emp.emp_Desig}}</td>
+        <td>{{emp.emp_Contact}}</td>
+        <td>
+          <p class="skill-name" *ngFor="let skill of emp.emp_Skills"> <span class="badge">{{skill.skill_name}} </span>
+          </p>
+        </td>
+        <td>
+          <button class="btn btn-primary" (click)="updateUser(emp.emp_ID)"><span class="glyphicon glyphicon-pencil"></span> Update</button>
+          <button class="btn btn-danger" (click)="deleteUser(emp.emp_ID)"><span class="glyphicon glyphicon-remove-sign"></span> Delete</button>
+          <!-- <button class="ui-button-danger" (click)="deleteUser(emp.emp_ID)" pButton icon="fa-trash" label="Delete"></button> -->
+        </td>
+
+        </tr>
+    </tbody>
+  </table>
 </div>
 <ng-template #showNull>
   <div class="container">
     <div class="no-data-message white-text">
-        <p>Sorry! There is no data</p>
+      <p>Sorry! There is no data</p>
     </div>
-     
+
   </div>
 </ng-template>
 
-<p-paginator pageLinkSize="3" [rows]="recordSizePerPage" [totalRecords]="skillListLength" (onPageChange)="paginate($event)" class="no-background"></p-paginator>
+<p-paginator pageLinkSize="3" *ngIf="employeeList" [rows]="recordSizePerPage" [totalRecords]="employeeListLength" (onPageChange)="paginate($event)"
+  class="no-background"></p-paginator>
 
 
 <div class="button-box-navigate middle-button width-50" routerLink="">
-    <p>Home</p>
+  <p>Home</p>
 </div>
-
-
-

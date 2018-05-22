@@ -19,7 +19,7 @@ export class AddSkillComponent implements OnInit {
 
   ngOnInit() {
     this.skillForm = new FormGroup({
-      'skill_name': new FormControl(null,[Validators.required, Validators.pattern('^[a-z A-Z ]*$'),Validators.minLength(2)]),
+      'skill_name': new FormControl(null,[Validators.required,Validators.minLength(2)]),
       'skill_description': new FormControl(null,[Validators.required, Validators.pattern('^[a-z A-Z ]*$'),Validators.minLength(4)])
     })
   }
@@ -28,8 +28,6 @@ export class AddSkillComponent implements OnInit {
     const errors = this.skillForm.get('skill_name').errors;
     if (errors.required){
       return 'Please enter Skill Name';
-    }else if(errors.pattern){
-      return 'Alphabets only';
     }else if(errors.minlength){
       return 'Skill should have a minimum of 2 letters';
     }else return false;
@@ -48,7 +46,7 @@ export class AddSkillComponent implements OnInit {
 
   addSkill(){
     let skill = new SkillModel(this.skillForm.value);
-    console.log(this.skillForm.value);
+    console.log(skill);
     this.skillServ.addSkill(skill).subscribe(()=>{
       this.router.navigateByUrl('/skillmanagement/skilllist');
     });

@@ -3,7 +3,7 @@
     <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
       <div class="form-container">
         <div>
-          <h1 class="h1 text-center">Employee Form</h1>
+          <h1 class="h1 text-center">New Employee</h1>
 
 
           <div class="form-group">
@@ -46,12 +46,19 @@
             </div>
 
           </div>
-
+          
           <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Skills</label>
+                    <div *ngIf="skillList">
+                      <p-multiSelect [options]="skillList" formArrayName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-6 submit-buttons">
-              <div class="form-group">
+              <div class="form-button">
                 <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success" [disabled]="!this.employeeForm.valid">
-                <!-- <input type="button" class="button expanded" value="Submit offline Requests" (click)="addCachedData()" class="btn btn-primary" -->
               </div>
             </div>
           </div>
@@ -60,3 +67,4 @@
     </form>
   </div>
 </div>
+

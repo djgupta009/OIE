@@ -1,9 +1,9 @@
 <div class="heading-container">
-  <h1 class="h1 heading white-text">Skills Details</h1>
+  <h1 class="h1 heading white-text">Skill List</h1>
 </div>
+<p-growl [(value)]="msgs"></p-growl>
 
-<div class="container skill-data" *ngIf="skillList | filterList:page:recordSizePerPage; else showNull">
-
+<div class="container skill-data" *ngIf="skillList; else showNull">
   <table class="table white-text">
     <thead>
       <tr>
@@ -16,27 +16,30 @@
       </tr>
     </thead>
     <tbody>
-      <tr  *ngFor="let skill of skillList">
-        <td>{{skill.skill_name}}</td>
-        <td>{{skill.skill_description}}</td>
+      <tr *ngFor="let skill of skillList | filterList:page:recordSizePerPage">
+        <td class="half-width">{{skill.skill_name}}</td>
+        <td class="half-width">{{skill.skill_description}}</td>
         <td>
-          <button class="btn btn-primary" (click)="updateSkill(skill.skill_id)">Update</button>
-          <button class="btn btn-danger" (click)="deleteSkill(skill.skill_id)">Delete</button>
+          <button class="btn btn-primary" (click)="updateSkill(skill.skill_id)">
+            <span class="glyphicon glyphicon-pencil"></span> Update</button>
+          <button class="btn btn-danger" (click)="deleteSkill(skill.skill_id)">
+            <span class="glyphicon glyphicon-remove-sign"></span> Delete</button>
         </td>
-        </tr>
+      </tr>
     </tbody>
   </table>
 </div>
+
 <ng-template #showNull>
   <div class="container">
     <div class="no-data-message white-text">
       <p>Sorry! There is no data</p>
     </div>
-
   </div>
 </ng-template>
 
-<p-paginator pageLinkSize="3" [rows]="recordSizePerPage" [totalRecords]="skillListLength" (onPageChange)="paginate($event)" class="no-background"></p-paginator>
+<p-paginator pageLinkSize="3" [rows]="recordSizePerPage" [totalRecords]="skillListLength" (onPageChange)="paginate($event)"
+  class="no-background"></p-paginator>
 
 
 <div class="button-box-navigate middle-button width-50" routerLink="">

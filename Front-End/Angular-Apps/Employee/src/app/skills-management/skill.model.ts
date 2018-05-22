@@ -2,7 +2,7 @@ export class SkillModel{
     skill_name: string;
     skill_description: string;
 
-    constructor(value: Object){
-        Object.apply(this,value);
+    constructor(values: Object = {}) {
+        Object.assign(this, values);
     }
 }

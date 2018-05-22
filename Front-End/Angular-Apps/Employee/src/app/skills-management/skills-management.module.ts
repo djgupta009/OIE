@@ -7,7 +7,7 @@ import { PaginatorModule } from 'primeng/paginator';
 import { SkillsManagementComponent } from './skills-management.component';
 import { AddSkillComponent } from './add-skill/add-skill.component';
 import { SkillsListComponent } from './skills-list/skills-list.component';
-
+import { GrowlModule } from 'primeng/growl';
 import { UpdateSkillComponent } from './update-skill/update-skill.component';
 import { FilterListPipe } from './skills-list/filter-list.pipe';
 
@@ -33,6 +33,7 @@ const route: Routes = [
         FormsModule,
         ReactiveFormsModule,
         PaginatorModule,
+        GrowlModule,
         RouterModule.forRoot(route)
     ],
     exports: [

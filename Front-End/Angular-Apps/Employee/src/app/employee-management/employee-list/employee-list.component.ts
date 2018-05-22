@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeManagementService } from '../employee-management.service';
-import { EmployeeModel } from '../../employee.model';
+import { EmployeeModel } from '../employee.model';
 import { Router } from '@angular/router';
-
+import { Message, ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  styleUrls: ['./employee-list.component.css'],
 })
 export class EmployeeListComponent implements OnInit {
 
   constructor(private empService: EmployeeManagementService,
-  private router: Router) { }
-  employeeList: any;
+  private router: Router,
+  private confirmationService: ConfirmationService ) { }
+  employeeList: Object;
   employeeListLength: number;
   recordSizePerPage: number = 5;
   page: number = 1;
+
   ngOnInit() {
       this.getEmployees();
   }
@@ -33,9 +35,15 @@ export class EmployeeListComponent implements OnInit {
   }
 
   deleteUser(empId: number){
-    this.empService.deleteEmployee(empId).subscribe(()=>{
-      this.getEmployees();
-    });
+    this.confirmationService.confirm({
+      message: 'Do you want to delete this record?',
+      header: 'Confirm Delete?',
+      accept: () => {
+        this.empService.deleteEmployee(empId).subscribe(()=>{
+          this.getEmployees();
+        });
+      }
+     });
   }
 
   updateUser(empId: number){

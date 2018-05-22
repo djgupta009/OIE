@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { EmployeeModel } from '../employee.model';
+import { EmployeeModel } from './employee.model';
 import { EmployeeDatabaseModel } from '../employee.database.model';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class EmployeeManagementService {
@@ -13,8 +14,8 @@ export class EmployeeManagementService {
     private router: Router) {
   }
 
-  userUrl: string = 'http://10.224.21.173:8080/';
-  url: string = 'http://127.0.0.1:4200/';
+  userUrl: string = environment.serverUrl;
+  url: string = environment.userUrl;
   employeeList: any;
 
   getEmployeeById(empId: number) {

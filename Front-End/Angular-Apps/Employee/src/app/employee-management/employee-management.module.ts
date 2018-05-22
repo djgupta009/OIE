@@ -9,7 +9,10 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { FilterListPipe } from './employee-list/filter-list.pipe';
-
+import { MultiSelectModule } from 'primeng/multiselect';
+import { GrowlModule } from 'primeng/growl';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
 
 const route: Routes = [
     {path:'employeemanagement', children: [
@@ -33,9 +36,13 @@ const route: Routes = [
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forRoot(route),
-        PaginatorModule
+        PaginatorModule,
+        GrowlModule,
+        ConfirmDialogModule,
+        MultiSelectModule
     ],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [ConfirmationService]
 })
 
 export class EmployeeManagementModule{}

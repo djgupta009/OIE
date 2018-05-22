@@ -33,8 +33,28 @@
     width: 30%;
 }
 
-:host >>> .ui-widget-header{
+:host >>> .ui-paginator{
     border: 0px;
     background: transparent;
     margin-bottom: 8rem;
  }
+
+:host >>> .ui-button{
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.skill-name{
+    display: inline;
+}
+ .employee-data{
+    height: 40vh;
+}

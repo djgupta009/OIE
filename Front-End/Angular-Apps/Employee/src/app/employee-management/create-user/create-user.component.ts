@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule,FormGroup, FormControl, Validators } from '@angular/forms';
-import { EmployeeModel } from '../../employee.model';
+import { FormsModule,FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { EmployeeModel } from '../employee.model';
 import { EmployeeManagementService } from '../employee-management.service';
 import { Router } from '@angular/router';
+import { SkillsManagementService } from '../../skills-management/skills-management.service';
+import { SkillModel } from '../../skills-management/skill.model';
+import { SelectItem } from 'primeng/api';
 
 @Component({
   selector: 'app-create-user',
@@ -12,23 +15,38 @@ import { Router } from '@angular/router';
 export class CreateUserComponent implements OnInit {
 
   constructor(private emplService: EmployeeManagementService,
-  private router: Router){}
+  private router: Router,
+  private skillServ: SkillsManagementService){}
 
 
   employeeForm: FormGroup;
+  skillList: SelectItem[] = [];  
+
   
   ngOnInit() {
     this.employeeForm = new FormGroup({
       'emp_firstName': new FormControl(null,[Validators.required, Validators.pattern('^[a-zA-Z]*$'),Validators.minLength(3)]),
       'emp_lastName': new FormControl(null,[Validators.required, Validators.pattern('^[a-zA-Z]*$'),Validators.minLength(2)]),
-      'emp_Desig': new FormControl(null,[Validators.required, Validators.pattern('^[a-z A-Z ]*$'),Validators.minLength(2)]),
-      'emp_Contact': new FormControl(null,[Validators.required, Validators.pattern('^[0-9]*$'),Validators.minLength(6)])
+      'emp_Desig': new FormControl(null,[Validators.required, Validators.pattern('^[a-z A-Z ]*$'),Validators.minLength(5)]),
+      'emp_Contact': new FormControl(null,[Validators.required, Validators.pattern('^[0-9]*$'),Validators.minLength(6)]),
+      'emp_Skills': new FormArray([])
+    });
+
+    this.skillServ.getSkills().subscribe((res: Response)=>{
+        this.createSkillList(res);
     });
   }
 
+  //for PrimeNG multiselect feature, converting its SelectItem[] based data 
+  createSkillList(res: any){
+      res.forEach((data) =>{
+        this.skillList.push({'label':data.skill_name,'value':data});
+      });
+  }
+
+
   addEmployee(){
     let employee = new EmployeeModel(this.employeeForm.value);
-    console.log(employee);
     this.emplService.addEmployee(employee).subscribe(()=>{
       this.router.navigateByUrl('/employeemanagement/employeelist');
     });
