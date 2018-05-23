@@ -52,7 +52,7 @@
                 <div class="form-group">
                     <label>Skills</label>
                     <div *ngIf="skillList">
-                      <p-multiSelect [options]="skillList" formArrayName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
+                      <p-multiSelect [options]="skillList" formControlName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
                     </div>
                 </div>
             </div>
