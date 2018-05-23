@@ -20,8 +20,7 @@ export class CreateUserComponent implements OnInit {
 
 
   employeeForm: FormGroup;
-  skillList: SelectItem[] = [];  
-
+  skillList: SelectItem[] = [];
   
   ngOnInit() {
     this.employeeForm = new FormGroup({
@@ -29,7 +28,7 @@ export class CreateUserComponent implements OnInit {
       'emp_lastName': new FormControl(null,[Validators.required, Validators.pattern('^[a-zA-Z]*$'),Validators.minLength(2)]),
       'emp_Desig': new FormControl(null,[Validators.required, Validators.pattern('^[a-z A-Z ]*$'),Validators.minLength(5)]),
       'emp_Contact': new FormControl(null,[Validators.required, Validators.pattern('^[0-9]*$'),Validators.minLength(6)]),
-      'emp_Skills': new FormArray([])
+      'emp_Skills': new FormControl()
     });
 
     this.skillServ.getSkills().subscribe((res: Response)=>{

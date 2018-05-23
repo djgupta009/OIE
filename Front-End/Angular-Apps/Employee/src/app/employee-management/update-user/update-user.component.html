@@ -42,7 +42,7 @@
           <label for="">Skills</label>
           <div class="row">
             <div *ngFor="let skill of skillList">
-                <p class="col-lg-2" *ngIf="skillAddedCheck(skill.skill_id)">{{skill.skill_name}} </p>
+                <p class="col-lg-2" *ngIf="skillAddedCheck(skill.skill_id)"><span class="badge">{{skill.skill_name}}</span> </p>
             </div>
           </div>
         </div>
