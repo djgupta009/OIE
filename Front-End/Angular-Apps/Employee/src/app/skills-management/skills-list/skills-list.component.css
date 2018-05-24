@@ -13,6 +13,7 @@
     padding: 10rem 0rem;
 }
 .button-box-navigate{
+    
     display: block;
     height: 6rem;
     background: #E91E43;
@@ -37,7 +38,7 @@
     width: 30%;
 }
 
-:host >>> .ui-widget-header{
+:host >>> .ui-paginator{
    border: 0px;
    background: transparent;
    margin-bottom: 8rem;

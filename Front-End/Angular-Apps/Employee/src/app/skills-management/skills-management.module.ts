@@ -10,6 +10,8 @@ import { SkillsListComponent } from './skills-list/skills-list.component';
 import { GrowlModule } from 'primeng/growl';
 import { UpdateSkillComponent } from './update-skill/update-skill.component';
 import { FilterListPipe } from './skills-list/filter-list.pipe';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
 
 const route: Routes = [
     { path: 'skillmanagement', children:[
@@ -34,11 +36,13 @@ const route: Routes = [
         ReactiveFormsModule,
         PaginatorModule,
         GrowlModule,
+        ConfirmDialogModule,
         RouterModule.forRoot(route)
     ],
     exports: [
         RouterModule
-    ]
+    ],
+    providers: [ConfirmationService]
 
 })
 

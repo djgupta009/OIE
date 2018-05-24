@@ -3,7 +3,7 @@ import { SkillsManagementService } from '../skills-management.service';
 import { SkillModel } from '../skill.model';
 import { Router } from '@angular/router';
 import { EmployeeManagementService } from '../../employee-management/employee-management.service';
-import { Message } from 'primeng/api';
+import { Message, ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-skills-list',
@@ -14,9 +14,10 @@ export class SkillsListComponent implements OnInit {
 
   constructor(private skillServ: SkillsManagementService,
     private router: Router,
-    private empSer: EmployeeManagementService) { }
+    private empSer: EmployeeManagementService,
+    private confirmationService: ConfirmationService ) { }
 
-  skillList: Object = [];
+  skillList: Object;
   skillListLength: number;
   recordSizePerPage: number = 5;
   page: number = 1;
@@ -39,14 +40,21 @@ export class SkillsListComponent implements OnInit {
 
 
   deleteSkill(skillId: number) {
-    this.skillServ.deleteSkill(skillId).subscribe((res) => {
-      this.getSkills();
-    }, 
-    error => {
-      if(error.error.status == 'CONFLICT'){
-        this.msgs.push({severity:'error', summary:'Cannot Delete', detail:'Skill cannot be deleted as it is already assigned to a user'});
+    this.confirmationService.confirm({
+      message: 'Do you want to delete this record?',
+      header: 'Confirm Delete?',
+      accept: () => {
+        this.skillServ.deleteSkill(skillId).subscribe((res) => {
+          this.getSkills();
+        }, 
+        error => {
+          if(error.error.status == 'CONFLICT'){
+            this.msgs.push({severity:'error', summary:'Cannot Delete', detail:'Skill cannot be deleted as it is already assigned to a user'});
+          }
+        });
       }
-    });
+     });
+   
   }
 
 

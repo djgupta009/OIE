@@ -2,7 +2,7 @@
   <h1 class="h1 heading white-text">Skill List</h1>
 </div>
 <p-growl [(value)]="msgs"></p-growl>
-
+<p-confirmDialog></p-confirmDialog>
 <div class="container skill-data" *ngIf="skillList; else showNull">
   <table class="table white-text">
     <thead>
@@ -33,7 +33,7 @@
 <ng-template #showNull>
   <div class="container">
     <div class="no-data-message white-text">
-      <p>Sorry! There is no data</p>
+      <p>Loading...</p>
     </div>
   </div>
 </ng-template>
@@ -42,6 +42,6 @@
   class="no-background"></p-paginator>
 
 
-<div class="button-box-navigate middle-button width-50" routerLink="">
-  <p>Home</p>
+<div class="button-box-navigate middle-button width-50" routerLink="/skillmanagement">
+  <p>Back</p>
 </div>

@@ -20,8 +20,13 @@ input.ng-valid{
 }
 
 :host >>> .ui-multiselect-panel{
-    width: 100%;
+    width: 100%; 
 }
+
+:host >>> .ui-multiselect-label-container{
+    line-height: 1.45;
+}
+
 .form-button{
-    margin-top: 2.5rem;
+    margin-top: 1.9rem;
 }

@@ -18,3 +18,6 @@ input.ng-valid{
 .skill-detail{
     margin-bottom: 2rem;
 }
+.select-skill{
+    width: 100%;
+}
