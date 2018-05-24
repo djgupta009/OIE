@@ -16,7 +16,7 @@ input.ng-valid{
 }
 
 :host >>> .ui-multiselect{
-    width: 48%;
+    width: 100%;
 }
 
 :host >>> .ui-multiselect-panel{

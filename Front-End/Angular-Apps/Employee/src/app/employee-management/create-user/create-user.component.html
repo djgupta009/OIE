@@ -54,6 +54,9 @@
                     <div *ngIf="skillList">
                       <p-multiSelect [options]="skillList" formControlName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
                     </div>
+                    <div *ngIf="this.employeeForm.get('emp_Skills').errors && this.employeeForm.get('emp_Skills').touched">
+                      <p class="errors" class="label label-danger">Please select any one skill</p>
+                  </div>
                 </div>
             </div>
             <div class="col-lg-6 submit-buttons">
