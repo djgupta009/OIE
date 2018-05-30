@@ -1,0 +1,18 @@
+.animal-text{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+.restart-button{
+    border: 1px solid transparent;
+    width: 130px;
+    height: 50px;
+    background: #C8C8C8;
+    border-radius: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.restart-div{
+    text-align: center;
+}

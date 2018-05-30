@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.margin-heading{
+    margin-bottom: 5rem;
+    font-weight: bolder;
+}
+
+.button-select{
+    border: 1px solid transparent;
+    width: 340px;
+    height: 110px;
+    background: #C8C8C8;
+    border-radius: 2px;
+    transition: background 1s ease, color 1s ease;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.accept-button{
+    margin-right: 3rem;
+}
+
+.accept-button:hover{
+    background: #398439;
+    color: white;
+}
+
+.reject-button:hover{
+    background: #d9534f;
+    color: white;
+}
