@@ -17,7 +17,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-sm-12">
             <div class="form-group">
               <label>Designation</label>
               <input type="text" formControlName="emp_Desig" class="form-control remark" />
@@ -27,7 +27,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-sm-12">
             <div class="form-group">
               <label>Contact</label>
               <input type="text" formControlName="emp_Contact" class="form-control" maxlength="10" />
@@ -48,9 +48,9 @@
         </div>
 
         <div class="row skill-detail">
-          <label class="col-lg-12">Add new Skill</label>
+          <label class="col-lg-12 col-sm-12">Add new Skill</label>
           <div class="form-group">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12">
               <!-- <input type="checkbox" [checked]="skillAlreadyAdded(skill.skill_id)" (change)="toggleSkill($event,skill)">{{skill.skill_name}} -->
               <select class="form-control select-skill" (change)="changeSelectedSkill($event.target.value)">
                 <ng-container *ngFor="let skill of skillList">
@@ -58,7 +58,7 @@
                 </ng-container>
               </select>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-12">
                 <div class="btn btn-success" (click)="addSkill()">+ Skill</div>
             </div>
           </div>
@@ -67,7 +67,7 @@
         <!-- <p-multiSelect [options]="skillMultiSelectList" formArrayName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect> -->
 
         <div class="row">
-          <div class="col-lg-6 submit-buttons">
+          <div class="col-lg-6 col-sm-12 submit-buttons">
             <div class="form-group">
               <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success" [disabled]="!this.employeeUpdateForm.valid">
             </div>

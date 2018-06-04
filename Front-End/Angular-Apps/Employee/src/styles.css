@@ -42,7 +42,6 @@ table {
 /* You can add global styles to this file, and also import other style files */
 body{
     background: -webkit-linear-gradient(top, #1e5799 0%,#207cca 56%,#2989d8 66%,#2989d8 66%,#2989d8 73%,#7db9e8 100%); 
-    background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
