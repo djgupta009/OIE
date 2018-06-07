@@ -1,0 +1,19 @@
+.back-button{
+    padding: 2rem 5rem;
+    background: green;
+    color: white;
+    float: right;
+    width: 10%;
+    font-size: 15px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+    color: black;
+    transition: color 1s ease, background 1s ease;
+    text-align: center;
+}
+
+.back-button:hover{
+    background: rgba(0,0,0,0.9);
+    color: white;
+    cursor: pointer;
+}

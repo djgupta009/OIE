@@ -1,0 +1,20 @@
+.form-handler{
+    margin: 10% auto;
+    width: 90rem;
+    padding: 10rem 10rem;
+    border-radius: 2px;
+    color: white;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid lightcoral;
+    box-shadow: 0px 0px 40px red;
+}
+input.ng-valid{
+    border: 1px solid limegreen;
+    box-shadow: 0px 0px 10px greenyellow;
+}
+
+.margin-bottom{
+    margin-bottom: 5rem;
+}

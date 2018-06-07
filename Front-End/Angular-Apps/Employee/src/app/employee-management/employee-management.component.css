@@ -1,6 +1,7 @@
 .button-box{
+    margin: 0 auto;
     display: block;
-    width: 90wh;
+    width: 90%;
     height: 12rem;
     background: #E91E43;
     text-align: center;
@@ -9,6 +10,7 @@
     cursor: pointer;
     border-radius: 3px;
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .mg-p{
@@ -28,4 +30,28 @@
 
 .management-container{
     height: 100vh;
+}
+
+.home-button{
+    margin: 0 auto;
+    display: block;
+    width: 40%;
+    height: 8rem;
+    background-color: #337ab7;
+    text-align: center;
+    line-height: 8rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 3rem;
+}
+
+.home-button-container{
+    margin-top: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .home-button {
+        width: 90%;
+    }
 }
