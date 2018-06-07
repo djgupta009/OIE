@@ -1,0 +1,115 @@
+ <p-growl [life]="3000" [(value)]="msgs" (click)="hideGrowl()">Close</p-growl>
+    <div class="container main-container">
+      <h2 class="translation-heading">Translator</h2>
+      <div class="form-container">
+        <form [formGroup]="animalForm" (submit)="dataSubmitted()">
+          
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" class="form-control" id="name" minlength="4" maxlength="20">
+                <span *ngIf="checkInputField('name')" class="label label-danger">{{checkInputField('name')}}</span>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="type">Type</label>
+                <select formControlName="type" class="form-control" id="health">
+                  <option value="terrestrial">Terrestrial</option>
+                  <option value="aquatic">Aquatic</option>
+                </select>
+                <span *ngIf="checkSelectField('type')" class="label label-danger">{{checkSelectField('type')}}</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="species">Species</label>
+                <input type="text" formControlName="species" class="form-control" id="species" minlength="4" maxlength="80">
+                <span *ngIf="checkInputField('species')" class="label label-danger">{{checkInputField('species')}}</span>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select formControlName="gender" class="form-control" id="health">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                <span *ngIf="checkSelectField('gender')" class="label label-danger">{{checkSelectField('gender')}}</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="weight">Weight(Kgs)
+                </label>
+                <input type="text" formControlName="weight" class="form-control" maxlength="6" minlenght="4" />
+                <span *ngIf="checkInputNumber('weight')" class="label label-danger">{{checkInputNumber('weight')}}</span>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="healthCondition">Health Condition</label>
+                <select formControlName="healthCondition" class="form-control" id="healthCondition">
+                  <option value="normal">Normal</option>
+                  <option value="sick">Sick</option>
+                  <option value="severe illness">Severe Illness</option>
+                </select>
+                <span *ngIf="checkSelectField('healthCondition')" class="label label-danger">{{checkSelectField('healthCondition')}}</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="allergic">Allergy</label>
+                <input class="form-control" formControlName="allergic" id="allergy">
+                <span *ngIf="checkInputField('allergic')" class="label label-danger">{{checkInputField('allergic')}}</span>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input class="form-control" formControlName="country" id="country">
+                <span *ngIf="checkInputField('country')" class="label label-danger">{{checkInputField('country')}}</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="about">About</label>
+                <textarea name="" class="form-control" formControlName="about" id="about" maxlength="250" cols="10" rows="5"></textarea>
+                <span *ngIf="checkInputField('about')" class="label label-danger">{{checkInputField('about')}}</span>
+              </div>
+            </div>
+  
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="form-group">
+                <label for="disease">Disease</label>
+                <input class="form-control" formControlName="disease" id="disease">
+                <span *ngIf="checkInputField('disease')" class="label label-danger">{{checkInputField('disease')}}</span>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-lg btn-success btn btn-block" [disabled]="formValid()">Submit</button>
+              </div>
+            </div>
+          </div>
+  
+        </form>
+      </div>
+      <app-back-button></app-back-button>
+    </div>
+
+    

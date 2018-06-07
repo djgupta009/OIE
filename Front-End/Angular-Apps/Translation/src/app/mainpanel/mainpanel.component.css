@@ -1,0 +1,36 @@
+.panel-button{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;    
+    transition: background 1s ease, color 1s ease;
+    border-radius: 10px;
+    color: white;
+}
+
+.panel-button:hover{
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    color: black;
+}
+
+.panel-button > p{
+    padding: 10rem 5rem;
+}
+
+.main-panel{
+    padding-top: 20%;
+}
+
+.trlist{
+    font-size: 35px;
+}
+.button-panel{
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 920px){
+    .panel-button{
+        margin-bottom: 5rem;
+    }
+}

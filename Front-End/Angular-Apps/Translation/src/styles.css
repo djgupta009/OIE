@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("http://troyziel.com/wp-content/uploads/Tunnel-of-Trees-Troy-Ziel-3-1280x1280.jpg");
+    background-size: cover;
+    background-position: fixed;
+    height: 100vh;
+}

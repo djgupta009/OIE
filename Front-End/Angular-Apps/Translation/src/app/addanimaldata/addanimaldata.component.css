@@ -1,0 +1,52 @@
+.main-container{
+    padding-top: 5%;
+}
+.form-container{
+    background: transparent;
+    padding: 40px 40px;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 4px 10px 46px black;
+}
+
+.visibleClass{
+    visibility: visible;
+}
+
+.translation-heading{
+    color: aliceblue;
+    text-shadow: 1px 0px 0px gray;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+input:focus, select:focus, textarea:focus{
+    border-bottom-color: darkgreen;
+}
+
+.form-control{
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 0px;
+    font-family: Tahoma;
+    padding: 0px;
+    background: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+:host >>> .back-button{
+    margin-right: 40px;
+}
+
+.form-control > option{
+    background-color: white;
+    color: black;
+    border-bottom: 20px;
+}
+
+#about{
+    resize: none;
+}
+
