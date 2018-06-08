@@ -23,6 +23,9 @@
             Contact
           </td>
           <td>
+            DOJ
+          </td>
+          <td>
             Skills
           </td>
         </tr>
@@ -33,6 +36,7 @@
           <td>{{emp.emp_lastName}}</td>
           <td>{{emp.emp_Desig}}</td>
           <td>{{emp.emp_Contact}}</td>
+          <td>{{emp.emp_JoiningDate | date: 'mediumDate' }}</td>
           <td>
             <p class="skill-name" *ngFor="let skill of emp.emp_Skills"> <span class="badge">{{skill.skill_name}} </span>
             </p>

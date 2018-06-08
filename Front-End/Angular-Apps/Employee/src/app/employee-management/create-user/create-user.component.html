@@ -2,7 +2,6 @@
   <div class="form-handler">
     <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
       <div class="form-container">
-        <div>
           <h1 class="h1 text-center">New Employee</h1>
 
 
@@ -10,7 +9,7 @@
             <label>First Name</label>
             <input type="text" formControlName="emp_firstName" class="form-control" class="form-control" />
             <div *ngIf="this.employeeForm.get('emp_firstName').errors && this.employeeForm.get('emp_firstName').touched">
-                <p class="errors" class="label label-danger">{{checkFirstName()}}</p>
+              <p class="errors" class="label label-danger">{{checkFirstName()}}</p>
             </div>
           </div>
 
@@ -19,7 +18,7 @@
             <label>Last Name</label>
             <input type="text" formControlName="emp_lastName" class="form-control" />
             <div *ngIf="this.employeeForm.get('emp_lastName').errors && this.employeeForm.get('emp_lastName').touched">
-                <p class="errors" class="label label-danger">{{checkLastName()}}</p>
+              <p class="errors" class="label label-danger">{{checkLastName()}}</p>
             </div>
           </div>
 
@@ -29,7 +28,7 @@
                 <label>Designation</label>
                 <input type="text" formControlName="emp_Desig" class="form-control remark" />
                 <div *ngIf="this.employeeForm.get('emp_Desig').errors && this.employeeForm.get('emp_Desig').touched">
-                    <p class="errors" class="label label-danger">{{checkDesig()}}</p>
+                  <p class="errors" class="label label-danger">{{checkDesig()}}</p>
                 </div>
               </div>
 
@@ -38,36 +37,51 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Contact</label>
-                <input type="text" formControlName="emp_Contact" class="form-control" maxlength="10"/>
+                <input type="text" formControlName="emp_Contact" class="form-control" maxlength="10" />
                 <div *ngIf="this.employeeForm.get('emp_Contact').errors && this.employeeForm.get('emp_Contact').touched">
-                    <p class="errors" class="label label-danger">{{checkContact()}}</p>
+                  <p class="errors" class="label label-danger">{{checkContact()}}</p>
                 </div>
               </div>
             </div>
 
           </div>
-          
+
           <div class="row">
             <div class="col-lg-6">
-                <div class="form-group">
-                    <label>Skills</label>
-                    <div *ngIf="skillList">
-                      <p-multiSelect [options]="skillList" formControlName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
-                    </div>
-                    <div *ngIf="this.employeeForm.get('emp_Skills').errors && this.employeeForm.get('emp_Skills').touched">
-                      <p class="errors" class="label label-danger">Please select any one skill</p>
-                  </div>
+              <div class="form-group">
+                <label>Skills</label>
+                <div *ngIf="skillList">
+                  <p-multiSelect [options]="skillList" formControlName="emp_Skills" [panelStyle]="{minWidth:'12em'}"></p-multiSelect>
                 </div>
+                <div *ngIf="this.employeeForm.get('emp_Skills').errors && this.employeeForm.get('emp_Skills').touched">
+                  <p class="errors" class="label label-danger">Please select any one skill</p>
+                </div>
+              </div>
             </div>
+
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Date of Joining</label>
+                    <input type="date" formControlName="emp_JoiningDate"  min="1980-01-01" class="form-control"/>
+                    <div *ngIf="this.employeeForm.get('emp_JoiningDate').errors && this.employeeForm.get('emp_JoiningDate').touched">
+                      <p class="errors" class="label label-danger">{{checkDOJ()}}</p>
+                    </div>
+                  </div>
+            </div>
+
+          </div>
+
+          <div class="row">
             <div class="col-lg-6 submit-buttons">
               <div class="form-button">
                 <input type="submit" class="button expanded" value="Submit Form" class="btn btn-success" [disabled]="!this.employeeForm.valid">
               </div>
             </div>
           </div>
-        </div>
+
+
+
       </div>
     </form>
   </div>
 </div>
-

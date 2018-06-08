@@ -3,7 +3,8 @@ export class EmployeeModel {
     emp_lastName: string;
     emp_Desig: string;
     emp_Contact: string;
-
+    emp_JoiningDate: Date;
+    
     // constuctor(firstname: string,lastname: string,desig: string,contact: string){
     //     this.emp_firstName = firstname;
     //     this.emp_lastName = lastname;

@@ -6,6 +6,7 @@ import { EmployeeManagementService } from '../employee-management.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SkillsManagementService } from '../../skills-management/skills-management.service';
 import { SelectItem } from 'primeng/api';
+import {Message} from 'primeng/api';
 
 @Component({
   selector: 'app-update-user',
@@ -25,6 +26,7 @@ export class UpdateUserComponent implements OnInit {
   employeeUpdateForm: FormGroup;
   skillList: Object;
   selectedSkillId: number;  
+  msgs: Message[] = [];
 
   ngOnInit() {
 
@@ -46,6 +48,7 @@ export class UpdateUserComponent implements OnInit {
       'emp_lastName': new FormControl({ value: this.employee.emp_lastName, disabled: false }),
       'emp_Desig': new FormControl(this.employee.emp_Desig, [Validators.required, Validators.pattern('^[a-z A-Z ]*$'), Validators.minLength(5)]),
       'emp_Contact': new FormControl(this.employee.emp_Contact, [Validators.required, Validators.pattern('^[0-9]*$'), Validators.minLength(6)]),
+      'emp_JoiningDate' : new FormControl(this.employee.emp_JoiningDate),
       'emp_Skills': new FormArray([])
     });
     let emp_skill = this.employeeUpdateForm.get('emp_Skills') as FormArray;
@@ -70,12 +73,16 @@ export class UpdateUserComponent implements OnInit {
   }
 
   addSkill(){
-    let skillListLength = Object.keys(this.skillList).length;
-    for(let i=0; i<skillListLength; i++){
-      if(this.skillList[i].skill_id== this.selectedSkillId){
-        let emp_skill = this.employeeUpdateForm.get('emp_Skills') as FormArray;
-        emp_skill.push(new FormControl(this.skillList[i]));
+    if(!this.skillAddedCheck(this.selectedSkillId)){
+      let skillListLength = Object.keys(this.skillList).length;
+      for(let i=0; i<skillListLength; i++){
+        if(this.skillList[i].skill_id== this.selectedSkillId){
+          let emp_skill = this.employeeUpdateForm.get('emp_Skills') as FormArray;
+          emp_skill.push(new FormControl(this.skillList[i]));
+        }
       }
+    }else{
+      this.msgs.push({severity:'error', summary:'Duplicate', detail:'Skill cannot be added as it is already assigned'});
     }
   }
 

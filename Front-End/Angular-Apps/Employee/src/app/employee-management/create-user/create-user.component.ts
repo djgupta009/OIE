@@ -28,7 +28,8 @@ export class CreateUserComponent implements OnInit {
       'emp_lastName': new FormControl(null,[Validators.required, Validators.pattern('^[a-zA-Z]*$'),Validators.minLength(2)]),
       'emp_Desig': new FormControl(null,[Validators.required, Validators.pattern('^[a-z A-Z ]*$'),Validators.minLength(5)]),
       'emp_Contact': new FormControl(null,[Validators.required, Validators.pattern('^[0-9]*$'),Validators.minLength(6)]),
-      'emp_Skills': new FormControl(null, Validators.required)
+      'emp_Skills': new FormControl(null, Validators.required),
+      'emp_JoiningDate' : new FormControl(null, Validators.required)
     });
 
     this.skillServ.getSkills().subscribe((res: Response)=>{
@@ -46,6 +47,7 @@ export class CreateUserComponent implements OnInit {
 
   addEmployee(){
     let employee = new EmployeeModel(this.employeeForm.value);
+    console.log(employee);
     this.emplService.addEmployee(employee).subscribe(()=>{
       this.router.navigateByUrl('/employeemanagement/employeelist');
     });
@@ -73,6 +75,15 @@ export class CreateUserComponent implements OnInit {
     }else return false;
   }
 
+  checkDOJ(){
+    const errors = this.employeeForm.get('emp_JoiningDate').errors;
+    if(errors.required){
+      return 'Please Select a Date';
+    }else{
+      return false;
+    }
+  }
+
   checkDesig(){
     const errors = this.employeeForm.get('emp_Desig').errors;
     if (errors.required){
@@ -80,7 +91,7 @@ export class CreateUserComponent implements OnInit {
     }else if(errors.pattern){
       return 'Alphabets only';
     }else if(errors.minlength){
-      return 'Designation should have a minimum of 2 letters';
+      return 'Designation should have a minimum of 5 letters';
     }else return false;
   }
 
@@ -89,10 +100,14 @@ export class CreateUserComponent implements OnInit {
     if (errors.required){
       return 'Please enter Contact Details';
     }else if(errors.pattern){
-      return 'Alphabets only';
+      return 'Numbers only';
     }else if(errors.minlength){
       return 'Contact should have a minimum of 6 numbers';
     }else return false;
   }
+
+  // getTodayDate(){
+  //   return Date.now();
+  // }
 
 }

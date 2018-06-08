@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  serverUrl: "http://10.224.21.173:8080/",
+  serverUrl: "http://10.135.156.176:8080/",
   userUrl: "http://127.0.0.1:4200/"
 };
