@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to Report Details page!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>This is a report detail page</h2>
+<router-outlet></router-outlet>
+<button class="button-style" (click)="gotoDashboard()">Proceed</button> -->
+
+
+<div class="background">
+<div style="text-align:center">
+  <h1 class="terrestrial">
+    Welcome to WAHIS+
+  </h1>
+  <img width="300" class="wahis-logo" alt="Angular Logo" src="../assets/imgs/wahis2x.png">
+</div>
+<h2 class="text-style">Click here to change the language : </h2>
+<div><a class="paddings" [ngClass]="{'selected' : selectedLanguage == 'EN'}" (click)="changeLanguage('EN')">English</a><a class="paddings" [ngClass]="{'selected' : selectedLanguage == 'FR'}" (click)="changeLanguage('FR')">Français</a><a class="paddings" [ngClass]="{'selected' : selectedLanguage == 'ES'}" (click)="changeLanguage('ES')">Español</a></div>
+<ul>
+  <li>
+    <h2 class="text-style"><span [(ngModel)]="content[0].title" ngDefaultControl>{{content[0].title}}</span></h2>
+  </li>
+  <li>
+    <h2 class="text-style"><span [(ngModel)]="content[1].title" ngDefaultControl>{{content[1].title}}</span></h2>
+  </li>
+  <li>
+    <h2  class="text-style" [(ngModel)]="content[2].about" ngDefaultControl>{{content[2].about}}</h2>
+  </li>
+</ul>
+
+<button class="button-style" (click)="gotoDashboard()">Proceed to dashboard</button>
+</div>

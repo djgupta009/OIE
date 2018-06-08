@@ -1,0 +1,16 @@
+{
+	"language_content":[
+		{
+			"title":"Présentation",
+			"enabled":true
+		},
+		{
+			"title":"A propos",
+			"enabled":false
+        },
+        {
+            "about":"L'Organisation mondiale de la santé animale (OIE) La nécessité de combattre les maladies animales au niveau mondial a conduit à la création de l'Office international des épizooties grâce à l'Accord international signé le 25 janvier 1924. En mai 2003, l'Office est devenu l'Organisation Mondiale de la Santé Animale mais a gardé son acronyme historique OIE. L'OIE est l'organisation intergouvernementale chargée d'améliorer la santé animale dans le monde. Les normes établies par l’Organisation sont reconnues comme références mondiales par l’Organisation Mondiale du Commerce (OMC). En 2017, l’OIE compte 181 Pays membres, entretient des contacts permanents avec 71 autres organisations internationales et régionales et dispose de Représentations Régionales et sous-régionales sur tous les continents. Comment l'organisation fonctionne-t-elle?  L’Organisation est placée sous l’autorité et le contrôle d’une Assemblée mondiale des délégués composée des Délégués désignés par les Gouvernements de tous les Pays Membres. Le fonctionnement de l'OIE est assuré par son siège mondial situé à Paris et placé sous la responsabilité d’un Directeur général élu par l'Assemblée mondiale des Délégués. Ce siège applique les résolutions du Comité élaborées avec l’appui de Commissions élues par les Délégués:",
+			"enabled":false
+		}
+	]
+}

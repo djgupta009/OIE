@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+
+<!-- <div class="background">
+<div style="text-align:center">
+  <h1 class="terrestrial">
+    Welcome to WAHIS+
+  </h1>
+  <img width="300" class="wahis-logo" alt="Angular Logo" src="../assets/imgs/wahis2x.png">
+</div>
+<h2 class="text-style">Click here to change the language : </h2>
+<div><a class="paddings" [ngClass]="{'selected' : selectedLanguage == 'EN'}" (click)="changeLanguage('EN')">English</a><a class="paddings" [ngClass]="{'selected' : selectedLanguage == 'FR'}" (click)="changeLanguage('FR')">Français</a><a class="paddings" [ngClass]="{'selected' : selectedLanguage == 'ES'}" (click)="changeLanguage('ES')">Español</a></div>
+<ul>
+  <li>
+    <h2 class="text-style"><span [(ngModel)]="content.language_content[0].title" ngDefaultControl>{{content.language_content[0].title}}</span></h2>
+  </li>
+  <li>
+    <h2 class="text-style"><span [(ngModel)]="content.language_content[1].title" ngDefaultControl>{{content.language_content[1].title}}</span></h2>
+  </li>
+  <li>
+    <h2  class="text-style" [(ngModel)]="content.language_content[2].about" ngDefaultControl>{{content.language_content[2].about}}</h2>
+  </li>
+</ul>
+
+<button class="button-style" (click)="gotoReportDetails()">Proceed</button>
+</div> -->
+
+<router-outlet></router-outlet>

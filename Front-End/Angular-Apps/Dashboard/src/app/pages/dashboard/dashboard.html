@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header class="header-style">
+    <img class="wahis-side-logo" alt="alt-text" src="../assets/imgs/wahis2x.png">
+    
+    <img class="wahis-side-icon-settings" alt="alt-text" src="../assets/imgs/set@2.png">
+    <img class="wahis-side-icon-bell" alt="alt-text" src="../assets/imgs/bell@2.png">
+    <img class="wahis-side-profileimg" alt="alt-text" src="../assets/imgs/man-dummy.jpg">
+    <span class="profile-name">Hello Shoeb</span>
+    <span class="profile-address">Noida, India</span>
+</header>
+<content>
+<div>
+<div class="rectangle" style="text-align:center">
+  <span class="rectangle-heading">Submit a <br>Local Report</span>
+  <ul class="list-style">
+      <li [ngClass]="{'blue-bg':selectedListItem=='1'}" class="list-item-style" (click)="openDetails('1')"><span [ngClass]="selectedListItem == '1' ? 'active' : 'inactive'">1</span><span class="list-text">Report Details</span><img class="arrow-fwd" alt="alt-text" src="../assets/imgs/right@2.png"></li>
+      <li [ngClass]="{'blue-bg':selectedListItem=='2'}" class="list-item-style" (click)="openDetails('2')"><span [ngClass]="selectedListItem == '2' ? 'active' : 'inactive'">2</span><span class="list-text">Outbreak Details</span><img class="arrow-fwd" alt="alt-text" src="../assets/imgs/right@2.png"></li>
+      <li [ngClass]="{'blue-bg':selectedListItem=='3'}" class="list-item-style" (click)="openDetails('3')"><span [ngClass]="selectedListItem == '3' ? 'active' : 'inactive'">3</span><span class="list-text">Control and Epl</span><img class="arrow-fwd" alt="alt-text" src="../assets/imgs/right@2.png"></li>
+      <li [ngClass]="{'blue-bg':selectedListItem=='4'}" class="list-item-style" (click)="openDetails('4')"><span [ngClass]="selectedListItem == '4' ? 'active' : 'inactive'">4</span><span class="list-text">Review and Submit</span><img class="arrow-fwd" alt="alt-text" src="../assets/imgs/right@2.png"></li>
+      <li [ngClass]="{'blue-bg':selectedListItem=='5'}" class="list-item-style" (click)="openDetails('5')"><span [ngClass]="selectedListItem == '5' ? 'active' : 'inactive'">5</span><span class="list-text">Confirmation</span><img class="arrow-fwd" alt="alt-text" src="../assets/imgs/right@2.png"></li>
+    </ul>
+    <span class="val-text">*Required field</span>
+    <button class="button-style" (click)="gotoHome()">Cancel</button>
+</div>
+<div [ngClass]="{'side-div':selectedListItem=='1','side-div-plain':selectedListItem!='1'}">
+<div *ngIf="selectedListItem=='1'">
+  <span class="header-content">Is this a terrestrial or an aquatic<br>animal problem ?</span>
+  <div class="mask1" (click)="loadComponent('T')"><span class="text-style">TERRESTRIAL</span></div>
+  <div class="mask2" (click)="loadComponent('A')"><span class="text-style">AQUATIC</span></div>
+</div>
+<report-detail *ngIf="selectedListItem=='2'"></report-detail>
+</div>
+</div>
+
+</content>
+
+<footer class="footer"></footer>
+<div class="footer2">
+  <img class="oie-logo" alt="alt-text" src="../assets/imgs/oie-logo.jpg">
+  <span class="oie-text">© 2018 OIE. All rights reserved.</span>
+  <button class="button-style1" (click)="gotoReportDetail()"> <img class="send-logo" alt="alt-text" src="../assets/imgs/send@2.png"><span>Ask a question</span></button>
+</div>
+
+

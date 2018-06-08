@@ -1,0 +1,8 @@
+.header{color: #415167;font-size: 18px;line-height: 32px;font-family: Montserrat;}
+.subheading{color: #415167;	font-family: Montserrat;	font-size: 18px;	font-weight: 600;	line-height: 24px;}
+.button-style1{display: inline-block;height: 40px;width: 172px;border-radius: 8px;background-color: #C7A17A;border: none;color: #FFFFFF;font-family: Montserrat;font-size: 14px;font-weight: 600;line-height: 32px;margin-top:9px;margin-right:20px}
+.select-text{    width: 500px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    font-size: 20px;}
