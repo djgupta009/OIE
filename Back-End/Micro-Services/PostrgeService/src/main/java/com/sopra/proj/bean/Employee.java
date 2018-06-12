@@ -1,8 +1,11 @@
 package com.sopra.proj.bean;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +15,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import javax.validation.constraints.NotBlank;
 
 /**
  * @author sonsaxena
@@ -40,6 +43,9 @@ public class Employee {
 	private String emp_Desig;
 	@Column(nullable = false,name="CONTACT")
 	private long emp_Contact;
+	@Column(nullable = false,name="JOINING_DATE")
+	@Temporal(TemporalType.DATE)
+	private Date emp_JoiningDate;
 	@Column(nullable = false,name="SKILL")
 	@Size(max=10,  message="Maximum of 10 skills can be associated")
 	@ManyToMany
@@ -108,6 +114,18 @@ public class Employee {
 
 
 
+	public Date getEmp_JoiningDate() {
+		return emp_JoiningDate;
+	}
+
+
+
+	public void setEmp_JoiningDate(Date emp_JoiningDate) {
+		this.emp_JoiningDate = emp_JoiningDate;
+	}
+
+
+
 	public List<Skill> getEmp_Skills() {
 		return emp_Skills;
 	}
@@ -121,6 +139,6 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + emp_ID + ", first_name=" + emp_firstName + ", last_name=" + emp_lastName +", desig =" + emp_Desig+", contact" + emp_Contact+"]";
+		return "Employee [id=" + emp_ID + ", first_name=" + emp_firstName + ", last_name=" + emp_lastName +", desig =" + emp_Desig+", contact =" + emp_Contact+", dateTime =" + emp_JoiningDate +"]";
 	}
 }

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.header-style{height: 64px;width: auto;background-color: #FFFFFF;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);}
+.wahis-side-logo{height:32px;width:109px;padding: 15px;}
+.arrow-fwd{padding: 25px;width: 8px;float: right;}
+.wahis-side-icon-settings{float: right;padding: 11px;height: 18px;margin-top: 12px;}
+.wahis-side-icon-bell{float: right;padding: 11px;height: 18px;margin-top: 12px;}
+.wahis-side-profileimg{float: right;padding: 11px;width: 35px;height: 35px;margin-top: 4px;border-radius: 18px;}
+.profile-name{font-family: Open Sans;right: 131px;padding: 16px;font-size: 14px;position: absolute;color: #415167;font-weight: bold;}
+.profile-address{position: absolute;right: 153px;font-family: Open Sans;top: 41px;color: #415167;font-size: 13px;}
+.rectangle {height: 592px;	width: 261px;	background-color: #EDF0F5;display: inline-block;}
+.rectangle-heading {color: #2D2F30;	font-family: Montserrat;display: inline-block;margin-top: 29px;font-size: 16px;	line-height: 20px;	text-align: center;}
+
+.list-item-style{height: 64px; list-style-type: none;font-family: Montserrat;border-top: 1px solid #C1C7D0;border-bottom: 1px solid #C1C7D0}
+.list-style{margin-top: 92px;padding:0}
+.header-content{color: #FFFFFF;text-transform: uppercase;margin-bottom: 30px;font-family: Montserrat;display:block;font-size: 24px;font-weight: bold;line-height: 34px;text-align: center;    text-shadow: 0px 2px 4px rgba(0,0,0,0.36);}
+.mask1 {background : url("../../../assets/imgs/Terrestrial@2.png");margin-right: 15px;background-color: #C2A59D;display:inline-block;background-repeat:no-repeat;background-size: contain;height: 230px;width: 400px;opacity: 0.85;border-radius: 6px;color: #415167;	font-family: Montserrat;	font-size: 30px;	font-weight: 500;	line-height: 35px;	text-align: center;}
+.mask2 {background : url("../../../assets/imgs/Aquatic@2.png");margin-left: 15px;background-color: #C2A59D;display:inline-block;background-repeat:no-repeat;background-size: contain;height: 230px;width: 400px;opacity: 0.85;border-radius: 6px;color: #415167;	font-family: Montserrat;	font-size: 30px;	font-weight: 500;	line-height: 35px;	text-align: center;}
+.text-style{text-align: center;font-family:Roboto;vertical-align: middle;line-height: 230px;font-weight: 600;}
+.side-div{background : url("../../../assets/imgs/mountain.png");width: 69.55%;background-repeat: no-repeat;height: 55%;display: inline-block;text-align: center;padding: 55px;position: absolute;}
+.side-div-plain{width: 69.55%;background-repeat: no-repeat;height: 55%;display: inline-block;text-align: center;padding: 55px;position: absolute;}
+.footer{height: 64px;	width: auto;	background-color: #F9F5E8;}
+.footer2{height: 64px;	width: auto;	background-color: #FFFFFF;}
+.oie-logo{height:32px;width:109px;display: inline-block;margin-top:13px}
+.send-logo{height: 12px;width: 19px;margin-top: 10px;margin-right: 8px;}
+.oie-text{text-align: center;display: inline-block;display: inline-block;margin-left: auto;margin-right: auto;left: 43%;position: absolute;margin-top: 26px;}
+.button-style1{float: right;display: inline-block;height: 40px;width: 172px;border-radius: 8px;background-color: #C7A17A;border: none;color: #FFFFFF;font-family: Montserrat;font-size: 14px;font-weight: 600;line-height: 32px;margin-top:9px;margin-right:20px}
+
+.active{border-radius: 20px;border-color: #415167;background-color: #415167;color: white;padding-left: 15px;padding-right: 15px;margin-left: 20px;padding-top: 10px;padding-bottom: 10px;font-size: 0.7em;margin-top: 13px;position: absolute;float: left;display: block;}
+.inactive{border-radius: 20px;border-color: C1C7D0;background-color: #C1C7D0;color: white;padding-left: 15px;padding-right: 15px;margin-left: 20px;padding-top: 10px;padding-bottom: 10px;font-size: 0.7em;margin-top: 13px;position: absolute;float: left;display: block;}
+.blue-bg{background-color: #CFEBF1}
+.button-style{
+    height: 40px;
+    width: 117px;
+    border-radius: 8px;
+    background-color: #C7A17A;
+
+        border: none;
+        color: #FFFFFF;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.val-text{
+    color: #2D2F30;	font-family: Montserrat;	font-size: 12px;	line-height: 24px;
+}
+.list-text{margin-top: 18px;
+    position: absolute;
+    margin-left: 64px;
+    float: left;
+    color: #415167;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    display: block;}
+
+

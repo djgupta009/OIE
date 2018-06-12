@@ -1,0 +1,16 @@
+{
+    "language_content": [
+        {
+            "title": "Presentación",
+            "enabled": true
+        },
+        {
+            "title": "Quiénes somos",
+            "enabled": false
+        },
+        {
+            "about":"La Organización Mundial de Sanidad Animal (OIE) La necesidad de combatir contra las enfermedades de los animales a nivel mundial constituyó el motivo por el cual se creó la Oficina Internacional de Epizootias gracias al Acuerdo internacional firmado el 25 de Enero de 1924. En mayo de 2003 la Oficina se convirtión en la Organización Mundial de Sanidad Animal, pero conserva su acrónimo histórico OIE. La OIE es la organización intergubernamental encargada de mejorar la sanidad animal en el mundo. La Organización Mundial del Comercio (OMC) ha reconocido las normas dictadas por la OIE, que en 2017 contaba con 181 Países Miembros, como normas de referencia mundial. La OIE mantiene relaciones permanentes con otras 71 organizaciones internacionales y regionales, y dispone de oficinas regionales y sub-regionales en todos los continentes. ¿Cómo funciona la organización? La OIE desempeña su cometido bajo la autoridad y el control de una Asemblea mundial de delegados compuesta de Delegados que designan los Gobiernos de todos los Países Miembros. El Director General, nombrado por el Asemblea mundial de delegados, dirige las actividades de la OIE en la Sede mundial. Esta sede aplica las resoluciones del Comité, elaboradas con el apoyo de las siguientes Comisiones elegidas por los Delegados:",
+			"enabled": false
+        }
+    ]
+}

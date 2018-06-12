@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.selected{
+    color : blue;
+    text-decoration: bold;
+    font-family: Montserrat;
+}
+
+.paddings{
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: underline;
+    font-family: Montserrat;
+}
+
+.text-style{
+    font-family: Montserrat;
+}
+.background{
+    background : url("../../../assets/imgs/Terrestrial@2.png");
+    height: 100vh;
+    width: 100vw;
+}
+
+.button-style{
+        height: 40px;
+        width: 225px;
+        border-radius: 8px;
+        background-color: #C7A17A;
+
+            border: none;
+            color: #FFFFFF;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 32px;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+}
+.wahis-logo{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.terrestrial {
+	height: 35px;
+	width: 190px;
+	color: #415167;
+	font-family: Montserrat;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 35px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
