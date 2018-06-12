@@ -1,0 +1,97 @@
+.login-header{
+    width:100%;
+    height: 64px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 70px;
+}
+
+.wahis-logo{
+    margin-left: 25px;
+    margin-top: 17px;
+}
+
+.login-submit-button{
+    width: 117px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #c7a17a;;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 36px;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    
+}
+
+
+.login-form-container{
+    padding-top: 50px;
+    opacity: 0.85;
+    height: 450px;
+    width: 600px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    background: url('../../../../assets/images/Terrestrial@2.png');
+    background-position: 0px 10px;
+    color: #415167;
+}
+
+.login-form-container > *{
+    margin: 0 auto;
+}
+
+
+.login-footer{
+    width: 1280px;
+    height: 64px;
+    background-color: #ffffff;
+}
+
+.input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid rgb(175,183,195);
+    text-shadow: 0px;
+    background: transparent;
+    width: 100%;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.login-form-header{
+    text-align: center;
+}
+
+.login-form-header > h2{
+    font-weight: bold;
+}
+
+.login-form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-holder{
+    width: 95%;
+    margin: 29.5px auto;
+}
+
+@media screen and (max-width: 660px){
+    .login-form-container{
+        width: 100%;
+        margin: 0px;
+    }
+
+    .input{
+        color: red;
+        width: 100%;
+    }
+
+}

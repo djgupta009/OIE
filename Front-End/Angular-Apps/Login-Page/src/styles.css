@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Montserrat;
+    background-image: url('../src/assets/images/mountain.png');
+    background-repeat: no-repeat;
+}
+
+
+@font-face{
+    font-family: Montserrat;
+    src: url('./assets/fonts/Montserrat.otf');
+}
