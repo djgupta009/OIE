@@ -7,7 +7,7 @@
 }
 
 .wahis-logo{
-    margin-left: 25px;
+    margin-left: 35px;
     margin-top: 17px;
 }
 
@@ -24,6 +24,15 @@
     margin: 0 auto;
     
 }
+
+.oie-logo {
+    width: 95.6px;
+    height: 30px;
+    margin-left: 35px;
+    margin-top: 17px;
+    object-fit: contain;
+}
+
 
 
 .login-form-container{
@@ -47,10 +56,32 @@
 }
 
 
+.footer-text{
+    width: 173px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #383b41;
+}
+
+.footer-text-container{
+    text-align: center;
+    padding-top: 23px;
+}
+
+
 .login-footer{
-    width: 1280px;
+    width: 100%;
     height: 64px;
+    overflow: hidden;
     background-color: #ffffff;
+    position:absolute;
+    bottom: 0px;
 }
 
 .input{
@@ -84,6 +115,36 @@
     width: 95%;
     margin: 29.5px auto;
 }
+
+.ask-ques-text{
+    width: 107px;
+    height: 32px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 7px;
+}
+
+
+.ask-ques{
+  width: 172px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #c7a17a;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 14px;
+  float: right;
+  margin-right: 35px;
+  padding-left: 19.5px;
+  padding-top: 2px;
+}
+
 
 @media screen and (max-width: 660px){
     .login-form-container{
