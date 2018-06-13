@@ -1,0 +1,160 @@
+.login-header{
+    width:100%;
+    height: 64px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 70px;
+}
+
+.wahis-logo{
+    margin-left: 35px;
+    margin-top: 17px;
+}
+
+.login-submit-button{
+    width: 117px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #c7a17a;;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 36px;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    
+}
+
+.oie-logo {
+    width: 95.6px;
+    height: 30px;
+    margin-left: 35px;
+    margin-top: 17px;
+    object-fit: contain;
+}
+
+
+
+.login-form-container{
+    padding-top: 50px;
+    opacity: 0.85;
+    height: 417px;
+    width: 600px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    background: url('../../../../assets/images/Terrestrial@2.png');
+    background-repeat: no-repeat;
+    background-position: 0px -7px;
+    color: #415167;
+}
+
+.login-form-container > *{
+    margin: 0 auto;
+}
+
+
+.footer-text{
+    width: 173px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #383b41;
+}
+
+.footer-text-container{
+    text-align: center;
+    padding-top: 23px;
+}
+
+
+.login-footer{
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+    background-color: #ffffff;
+    position:absolute;
+    bottom: 0px;
+}
+
+.input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid rgb(175,183,195);
+    text-shadow: 0px;
+    background: transparent;
+    width: 100%;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.login-form-header{
+    text-align: center;
+}
+
+.login-form-header > h2{
+    font-weight: bold;
+}
+
+.login-form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-holder{
+    width: 95%;
+    margin: 29.5px auto;
+}
+
+.ask-ques-text{
+    width: 107px;
+    height: 32px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 7px;
+}
+
+
+.ask-ques{
+  width: 172px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #c7a17a;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 14px;
+  float: right;
+  margin-right: 35px;
+  padding-left: 19.5px;
+  padding-top: 2px;
+}
+
+
+@media screen and (max-width: 660px){
+    .login-form-container{
+        width: 100%;
+        margin: 0px;
+    }
+
+    .input{
+        color: red;
+        width: 100%;
+    }
+
+}
