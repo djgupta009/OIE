@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule,FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import { EmployeeModel } from '../employee.model';
-import { EmployeeManagementService } from '../employee-management.service';
+import { EmployeeModel } from '../model/employee.model';
+import { EmployeeManagementService } from '../service/employee-management.service';
 import { Router } from '@angular/router';
-import { SkillsManagementService } from '../../skills-management/skills-management.service';
-import { SkillModel } from '../../skills-management/skill.model';
+import { SkillsManagementService } from '../../skills-management/service/skills-management.service';
+import { SkillModel } from '../../skills-management/model/skill.model';
 import { SelectItem } from 'primeng/api';
 
 @Component({
