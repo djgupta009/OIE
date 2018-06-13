@@ -1,16 +1,16 @@
- import { AppRoutingModule } from '../../app-routing.module';
+ import { AppRoutingModule } from '../../../app-routing.module';
 import { Observable } from 'rxjs/Observable';
-import { PaginationComponent } from '../paginations/pagination.component';
+import { PaginationComponent } from '../../shared/components/paginations/pagination.component';
 import { Component, OnInit, Injectable, HostListener } from '@angular/core';
-import { EmployeeService } from '../../service/service';
-import { Employee } from '../../bean/employee';
-import { EmployeeResponse } from '../../bean/employee.response';
+import { EmployeeService } from '../../../service/service';
+import { Employee } from '../../../interface/employee/employee';
+import { EmployeeResponse } from '../../../interface/employee/employee.response';
 import {ReactiveFormsModule, FormsModule, FormBuilder, Validators, FormArray, FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router, ParamMap, Routes, UrlSegment } from '@angular/router';
 import { AsyncPipe } from '@angular/common';
 import { AsyncLocalStorage } from 'angular-async-local-storage';
 import { JSONSchema } from 'JSON';
-import { OnoffserviceService } from "../../service/onoffservice.service";
+import { OnoffserviceService } from "../../../service/onoffservice.service";
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
