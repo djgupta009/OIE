@@ -1,9 +1,9 @@
-import { Pageable } from '../components/employees/employee.component';
+import { Pageable } from '../modules/employee/employees/employee.component';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import { Employee } from '../bean/employee';
-import { EmployeeResponse } from '../bean/employee.response';
+import { Employee } from './../interface/employee/employee';
+import { EmployeeResponse } from './../interface/employee/employee.response';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Http, Response, Headers, URLSearchParams, RequestOptions } from '@angular/http';
@@ -22,7 +22,7 @@ export class EmployeeService {
   url = 'http://127.0.0.1:4200/';
   constructor(private cachedhttp: CachedHttp, private http: HttpClient) { }
   allUrl1 = environment.serviceURL;
-  private userUrl = 'http://10.133.27.61:8080/';
+  private userUrl = 'http://10.133.27.122:8080/';
   allUrl = this.userUrl + 'data';
 
   getEmployees(): Observable<EmployeeResponse> {
