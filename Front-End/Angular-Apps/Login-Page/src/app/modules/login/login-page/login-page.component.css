@@ -29,14 +29,16 @@
 .login-form-container{
     padding-top: 50px;
     opacity: 0.85;
-    height: 450px;
+    height: 417px;
     width: 600px;
     border-radius: 6px;
     background-color: #ffffff;
+    -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     background: url('../../../../assets/images/Terrestrial@2.png');
-    background-position: 0px 10px;
+    background-repeat: no-repeat;
+    background-position: 0px -7px;
     color: #415167;
 }
 
