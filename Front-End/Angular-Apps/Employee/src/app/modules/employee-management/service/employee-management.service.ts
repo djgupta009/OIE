@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { EmployeeModel } from './employee.model';
-import { EmployeeDatabaseModel } from '../employee.database.model';
+import { EmployeeModel } from '../model/employee.model';
 import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../../environments/environment';
 
 @Injectable()
 export class EmployeeManagementService {

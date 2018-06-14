@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SkillsManagementService } from '../skills-management.service';
-import { SkillModel } from '../skill.model';
+import { SkillsManagementService } from '../service/skills-management.service';
+import { SkillModel } from '../model/skill.model';
 import { Router } from '@angular/router';
-import { EmployeeManagementService } from '../../employee-management/employee-management.service';
+import { EmployeeManagementService } from '../../employee-management/service/employee-management.service';
 import { Message, ConfirmationService } from 'primeng/api';
 
 @Component({

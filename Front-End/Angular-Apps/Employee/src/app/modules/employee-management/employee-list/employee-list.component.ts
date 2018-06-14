@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeManagementService } from '../employee-management.service';
-import { EmployeeModel } from '../employee.model';
+import { EmployeeManagementService } from '../service/employee-management.service';
+import { EmployeeModel } from '../model/employee.model';
 import { Router } from '@angular/router';
 import { Message, ConfirmationService } from 'primeng/api';
 

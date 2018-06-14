@@ -9,7 +9,7 @@ import { AddSkillComponent } from './add-skill/add-skill.component';
 import { SkillsListComponent } from './skills-list/skills-list.component';
 import { GrowlModule } from 'primeng/growl';
 import { UpdateSkillComponent } from './update-skill/update-skill.component';
-import { FilterListPipe } from './skills-list/filter-list.pipe';
+import { FilterListPipe } from './skills-list/pipe/filter-list.pipe';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
 

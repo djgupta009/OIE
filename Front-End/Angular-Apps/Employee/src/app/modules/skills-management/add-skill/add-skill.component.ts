@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule,FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
-import { SkillModel } from '../skill.model';
-import { SkillsManagementService } from '../skills-management.service';
+import { SkillModel } from '../model/skill.model';
+import { SkillsManagementService } from '../service/skills-management.service';
 import { Router } from '@angular/router';
 
 @Component({
