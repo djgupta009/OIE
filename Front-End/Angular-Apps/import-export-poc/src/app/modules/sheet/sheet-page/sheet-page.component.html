@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="pageWrapper">
+    <div class="pageTitle">
+      <span class="title">Import/Export Reports</span>
+    </div>
+    <div class="contentWrapper">
+      <div class="headerfilterActionWrapper">
+        <div class="headerfilterCol-left">
+          <input type="file" (change)="changeListener($event)">
+        </div>
+        <div class="headerfilterCol-right">
+          <form [formGroup]="exportForm" class="form-inline" (ngSubmit)="submitForm(exportForm)">
+              <div class="form-inline-col">
+                  <select class="form-control" formControlName="exportType">
+                      <option value="0">Export Report</option>
+                      <option value="1">Export in CSV</option>
+                      <option value="2">Export in Excel</option>
+                    </select>
+              </div>
+              <div class="form-inline-col">
+               <input type="submit" class="btn btn-primary" value="Export">
+              </div>
+          </form>
+          
+        </div>
+      </div>
+      <!--filter end -->
+      <div class="table-responsive">
+          <table #mytable class="table">
+            <thead>
+              <tr>
+                <th *ngFor="let item of tableInfo['headings']">
+                  {{item}}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let items of tableInfo['tds']">
+                <td *ngFor="let td of items">{{td}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
